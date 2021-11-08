@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinalApi</name>
+    </assembly>
+    <members>
+        <member name="M:FinalApi.Controllers.EmployeeController.Get">
+            <summary>
+            returns all employees
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalApi.Controllers.EmployeeController.Post(FinalApi.Employee)">
+            <summary>
+            create an employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalApi.Controllers.EmployeeController.Delete(System.Guid)">
+            <summary>
+            delete an employee
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FinalApi.Controllers.EmployeeController.Update(System.Guid,FinalApi.Employee)">
+            <summary>
+            edit an employee
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

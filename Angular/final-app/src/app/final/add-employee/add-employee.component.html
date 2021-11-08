@@ -1,0 +1,35 @@
+<h1>Add a note </h1>
+<form class="add-note-form">
+    <mat-form-field>
+        <input matInput name="inputName" [(ngModel)]='name' required minlength="1" #nameModel="ngModel" />
+    </mat-form-field>
+
+    <div *ngIf="nameModel.errors?.['required']">
+        Name is required.
+    </div>
+
+
+    <mat-form-field>
+        <input matInput name="inputAge" [(ngModel)]='age' required minlength="4" #ageModel="ngModel" />
+    </mat-form-field>
+
+    <div *ngIf="ageModel.errors?.['required']">
+        Age is required.
+    </div>
+
+
+
+    <mat-form-field>
+        <input matInput name="inputJob" [(ngModel)]='job' required minlength="4" #jobModel="ngModel" />
+    </mat-form-field>
+
+    <div *ngIf="jobModel.errors?.['required']">
+        Title is required.
+    </div>
+
+
+
+
+    <button mat-button (click)="add()">Add</button>
+
+</form>

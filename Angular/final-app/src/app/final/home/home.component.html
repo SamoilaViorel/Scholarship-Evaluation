@@ -1,0 +1,5 @@
+<app-employee [selectedOrder]="order" [selectedType]="type"> </app-employee>
+<app-add-tool> </app-add-tool>
+<app-ascending-or-not (emitSelectedOrder)="receivedOrder($event)"></app-ascending-or-not>
+<br>
+<app-date-type (emitSelectedType)="receivedType($event)"> </app-date-type>

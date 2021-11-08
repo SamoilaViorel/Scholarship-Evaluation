@@ -1,0 +1,68 @@
+<div class="noteContainer">
+    <div class="noteDiv" *ngFor="let employee of employees">
+        <mat-card class="noteCard">
+            <div>
+                <mat-card-header class="cardTitle">
+                    {{employee.name}}
+                </mat-card-header>
+
+                <mat-card-content>
+                    {{employee.age}}
+                </mat-card-content>
+
+                <mat-card-content>
+                    {{employee.job}}
+                </mat-card-content>
+
+                <mat-card-content>
+                    {{employee.date|date:'medium'}}
+                </mat-card-content>
+
+                <div *ngIf="selectedType=='medium'">
+                    <mat-card-content>
+                        {{employee.date|date:'medium'}}
+                    </mat-card-content>
+                </div>
+
+                <div *ngIf="selectedType=='short'">
+                    <mat-card-content>
+                        {{employee.date|date:'short'}}
+                    </mat-card-content>
+                </div>
+
+                <div *ngIf="selectedType=='full'">
+                    <mat-card-content>
+                        {{employee.date|date:'fullDate'}}
+                    </mat-card-content>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="iconsToLeft">
+                    <button mat-icon-button>
+                        <mat-icon>forward</mat-icon>
+                    </button>
+
+                    <button mat-icon-button>
+                        <mat-icon>star_half</mat-icon>
+                    </button>
+
+                    <button mat-icon-button>
+                        <mat-icon>done_outline</mat-icon>
+                    </button>
+
+                </div>
+
+                <div class="iconsToRight">
+                    <button mat-icon-button (click)="updateEmployee(employee)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+
+                    <button mat-icon-button (click)="deleteEmployee(employee.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-card>
+
+    </div>
+</div>
